@@ -11,7 +11,7 @@ const HomeOne = () => {
         </span>
       </a>
       <div className="floating-hearts">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(150)].map((_, i) => (
           <div key={i} className="heart"></div>
         ))}
       </div>
