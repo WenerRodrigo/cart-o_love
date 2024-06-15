@@ -1,0 +1,73 @@
+/* HomeOne.css */
+
+/* Styling for the floating hearts */
+.heart {
+    @apply absolute bg-red-500 opacity-70 w-5 h-5 transform rotate-45;
+    bottom: -50px;
+    animation: float 10s infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    @apply absolute bg-red-500 rounded-full;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 10px;
+    top: 0;
+  }
+  
+  /* Floating hearts animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(45deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Variations for each heart to create a random effect */
+  .floating-hearts .heart:nth-child(odd) {
+    animation-duration: 8s;
+  }
+  
+  .floating-hearts .heart:nth-child(even) {
+    animation-duration: 12s;
+  }
+  
+  .floating-hearts .heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+  .floating-hearts .heart:nth-child(2) { left: 10%; animation-delay: 1s; }
+  .floating-hearts .heart:nth-child(3) { left: 15%; animation-delay: 2s; }
+  .floating-hearts .heart:nth-child(4) { left: 20%; animation-delay: 3s; }
+  .floating-hearts .heart:nth-child(5) { left: 25%; animation-delay: 4s; }
+  .floating-hearts .heart:nth-child(6) { left: 30%; animation-delay: 5s; }
+  .floating-hearts .heart:nth-child(7) { left: 35%; animation-delay: 6s; }
+  .floating-hearts .heart:nth-child(8) { left: 40%; animation-delay: 7s; }
+  .floating-hearts .heart:nth-child(9) { left: 45%; animation-delay: 8s; }
+  .floating-hearts .heart:nth-child(10) { left: 50%; animation-delay: 9s; }
+  .floating-hearts .heart:nth-child(11) { left: 55%; animation-delay: 10s; }
+  .floating-hearts .heart:nth-child(12) { left: 60%; animation-delay: 11s; }
+  .floating-hearts .heart:nth-child(13) { left: 65%; animation-delay: 12s; }
+  .floating-hearts .heart:nth-child(14) { left: 70%; animation-delay: 13s; }
+  .floating-hearts .heart:nth-child(15) { left: 75%; animation-delay: 14s; }
+  .floating-hearts .heart:nth-child(16) { left: 80%; animation-delay: 15s; }
+  .floating-hearts .heart:nth-child(17) { left: 85%; animation-delay: 16s; }
+  .floating-hearts .heart:nth-child(18) { left: 90%; animation-delay: 17s; }
+  .floating-hearts .heart:nth-child(19) { left: 95%; animation-delay: 18s; }
+  /* Add more nth-child rules as needed */
+  

@@ -1,0 +1,51 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the floating hearts */
+.heart {
+  @apply absolute bg-red-500 opacity-70 w-5 h-5 transform rotate-45;
+  bottom: -50px;
+  animation: float 10s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  @apply absolute bg-red-500 rounded-full;
+  width: 20px;
+  height: 20px;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: 10px;
+  top: 0;
+}
+
+.floating-hearts .heart:nth-child(1) { left: 20%; animation-duration: 8s; animation-delay: 0s; }
+.floating-hearts .heart:nth-child(2) { left: 40%; animation-duration: 9s; animation-delay: 1s; }
+.floating-hearts .heart:nth-child(3) { left: 60%; animation-duration: 7s; animation-delay: 2s; }
+.floating-hearts .heart:nth-child(4) { left: 80%; animation-duration: 10s; animation-delay: 3s; }
+/* Add more nth-child rules as needed */
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
